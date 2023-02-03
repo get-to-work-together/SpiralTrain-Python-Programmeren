@@ -8,6 +8,8 @@ url  = 'http://api.openweathermap.org/data/2.5/weather'\
        '&lang=en'\
        '&units=metric' % city
 
+print(url)
+
 r = requests.get(url)
 
 data = r.json()

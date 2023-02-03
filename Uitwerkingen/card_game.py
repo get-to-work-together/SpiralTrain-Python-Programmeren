@@ -68,7 +68,10 @@ class Speler:
         self.hand = []
         
     def krijg_kaarten(self, cards):
-        self.hand.extend(cards)
+        if isinstance(cards, list):
+            self.hand.extend(cards)
+        else:
+            self.hand.append(cards)
         
     @property
     def score(self):
